@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
+
+const Button = styled.button`
+    background-color: red;
+`;
 
 class Hold extends Component {
     render() {
         return (
             <div>
-                <button onClick={this.props.hold} >Hold</button>
+                <Button onClick={this.props.hold} >Hold</Button>
             </div>
         );
     }

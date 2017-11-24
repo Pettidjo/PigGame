@@ -1,0 +1,26 @@
+.container {
+    position: absolute;
+    width: 500px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 50px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn-row {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    margin: 15px 10px;
+    cursor: pointer;
+}
+
+.dices {
+    margin: 15px 0;
+}

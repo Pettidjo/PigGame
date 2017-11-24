@@ -60,6 +60,8 @@ class Game extends Component {
             this.setState({
                 [curPlayer]: {
                     ...this.state[curPlayer],
+                    dice1: null,
+                    dice2: null,
                     currentScore: 0
                 }
             })
@@ -127,7 +129,7 @@ class Game extends Component {
     render() {
         return (
             <div className="container">
-                <Players player1={this.state.player1} player2={this.state.player2} />
+                <Players player1={this.state.player1} player2={this.state.player2} curPlayer={this.state.currentPlayer}/>
                 <div className="btn-row" >
                     <Roll roll={this.updatePlayerDice} />
                     <Hold hold={this.holdScore} disabled={this.disabled()}/>

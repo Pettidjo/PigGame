@@ -114,13 +114,23 @@ class Game extends Component {
         this.setState(this.initialState);
     }
 
+    disabled = () => {
+        const curPlayer = this.state.currentPlayer;
+        console.log('try')
+        if(this.state[curPlayer].dice1 === null || this.state[curPlayer].dice2 === null) {
+            return true
+        } else {
+            return false
+        }
+    }
+
     render() {
         return (
             <div className="container">
                 <Players player1={this.state.player1} player2={this.state.player2} />
                 <div className="btn-row" >
                     <Roll roll={this.updatePlayerDice} />
-                    <Hold hold={this.holdScore}/>
+                    <Hold hold={this.holdScore} disabled={this.disabled()}/>
                 </div>
             </div>
         );

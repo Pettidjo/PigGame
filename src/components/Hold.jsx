@@ -19,7 +19,11 @@ class Hold extends Component {
     render() {
         return (
             <div>
-                <Button onClick={this.props.hold} disabled={this.props.disabled} >Hold</Button>
+                <Button 
+                    onClick={this.props.hold} 
+                    disabled={this.props.disable}>
+                    Hold
+                </Button>
             </div>
         );
     }

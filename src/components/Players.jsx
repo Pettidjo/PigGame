@@ -8,14 +8,15 @@ import Scores from './Scores';
 import styled from 'styled-components';
 
 const CurPlayer = styled.p`
-    color: ${activePlayer};
+    font-weight: ${activePlayer};
+    text-transform: uppercase;
 `;
 
 function activePlayer(props) {
     if(props.active) {
-        return "red"
+        return "bold";
     } else {
-        return "yellow"
+        return "normal";
     }
 }
 
